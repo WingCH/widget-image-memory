@@ -45,13 +45,23 @@ struct WidgetExtensionEntryView : View {
         
         GeometryReader { metrics in
             VStack(spacing: 0) {
-                Image("bg1-min")
+                /*
+                 bg1: 17.3mb (6000 × 4000)
+                 bg1-min: 89kb (6000 × 4000)
+                 bg1-min-cropped: 11kb (320 × 213)
+                 */
+                Image("bg1-min-cropped")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: metrics.size.height * 0.5)
                     .clipped()
                 
-                Image("bg2-min")
+                /*
+                 bg2: 19.7mb (6000 × 4000)
+                 bg2-min: 96kb (6000 × 4000)
+                 bg2-min-cropped: 12kb (320 × 213)
+                 */
+                Image("bg2-min-cropped")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: metrics.size.height * 0.5)
